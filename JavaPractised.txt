@@ -1,0 +1,59 @@
+class Main {
+    public static void main(String[] args) {
+        String name = "UdayKiran";
+        String reverse = "";
+        for(int i=0; i<name.length(); i++){
+            reverse = name.charAt(i) + reverse ;
+        }
+        System.out.println("String before Reverse : " + name);
+        System.out.println("Reverse of a String is: " + reverse);
+        
+    StringBuilder sbuffer = new StringBuilder("denesed");
+    sbuffer.append("KingKong");
+    System.out.println(sbuffer.reverse());
+    System.out.println(sbuffer.substring(0,5));
+    
+    int a=53;
+    int b=47;
+    int c= b; // 47
+    b = a; // 53
+    a = c; // 47
+    System.out.println(a +" , " + b);
+    
+    String value = "DharmakariUdaykiran";
+    //String regex = "A | E | I | O | U";
+    System.out.println(value.toUpperCase());
+    System.out.println(value.toUpperCase().matches(".*[AEIOU]*."));
+    
+    Main ex = new Main();
+    ex.printPrime(29);
+    
+    }
+    
+    public void printPrime(int num){
+        boolean flag = false;
+        if(num == 0 || num == 1){
+             flag=false;
+        }
+        if(num == 2){
+            flag = true;
+        }
+        
+        if(!flag){
+            for(int i=2; i<=num/2; i++){
+                if(num % i == 0){
+                    flag = false;
+                    break;
+                }
+            }
+        }
+        
+        if(flag){
+            System.out.println("it is a prime");
+        }else{
+            System.out.println("not a prime");
+        }
+    }
+    
+   
+}
