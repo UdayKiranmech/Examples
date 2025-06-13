@@ -7,7 +7,6 @@ class Main {
         }
         System.out.println("String before Reverse : " + name);
         System.out.println("Reverse of a String is: " + reverse);
-        
     StringBuilder sbuffer = new StringBuilder("denesed");
     sbuffer.append("KingKong");
     System.out.println(sbuffer.reverse());
